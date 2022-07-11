@@ -6,23 +6,20 @@ var result = document.querySelector('.result');
 var subType = 'basic';
 var subDuration = Number('1');
 
-//console.log(subDuration);
-
 // Event Listeners
 
 subTypeElement.addEventListener('change', function (e) {
   subType = e.target.value;
   updateSubsciptionDiv();
-  //console.log(subType);
 });
 
 subDurationElement.addEventListener('change', function (e) {
   subDuration = Number(e.target.value);
   updateSubsciptionDiv();
-  //console.log(subDuration);
 });
 
-//
+/* A function that caculates cost of subscription
+(called by both change event listeners) */
 
 var updateSubsciptionDiv = function () {
   var monthlyCosts = Number('5');
